@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhinmal Juti Official</title>
+
+<style>
+body {margin:0; font-family:Arial; background:#f5f5f5;}
+
+header {
+  background:#3e2723;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+nav {
+  display:flex;
+  justify-content:center;
+  background:#5d4037;
+  padding:10px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #FFD700;
+}
+
+.hero {
+  background:url('https://via.placeholder.com/1200x400') center/cover;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+.hero h1 {font-size:40px;}
+
+.products {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:20px;
+}
+
+.card {
+  background:white;
+  margin:15px;
+  width:250px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width:100%;
+}
+
+.card h3 {
+  margin:10px;
+}
+
+.price {
+  color:#8B4513;
+  font-weight:bold;
+}
+
+button {
+  background:#8B4513;
+  color:white;
+  border:none;
+  padding:10px;
+  width:90%;
+  margin:10px;
+  border-radius:5px;
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background:#6B3410;
+}
+
+footer {
+  background:#3e2723;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav a {
+    margin: 5px 0;
+    display: block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Bhinmal Juti Official</h1>
+  <p>Handcrafted Tradition, Modern Style</p>
+</header>
+
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="#">👨 Men</a>
+  <a href="#">👩 Women</a>
+  <a href="#">📞 Contact</a>
+  <a href="clock.html">⏰ Clock</a>
+  <a href="jokes.html">😂 Jokes</a>
+</nav>
+
+<section class="hero">
+  <h1>Premium Mojari Collection</h1>
+  <p>COD Available | Free Shipping</p>
+</section>
+
+<section class="products">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250">
+    <h3>Men Leather Mojari</h3>
+    <p class="price">₹799</p>
+    <button onclick="order('Men Leather Mojari ₹799')">Order Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250">
+    <h3>Designer Women Jutti</h3>
+    <p class="price">₹999</p>
+    <button onclick="order('Designer Women Jutti ₹999')">Order Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250">
+    <h3>Wedding Special Mojari</h3>
+    <p class="price">₹1199</p>
+    <button onclick="order('Wedding Mojari ₹1199')">Order Now</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Bhinmal Juti Official</p>
+</footer>
+
+<script>
+function order(product){
+  let phone = "919571906926";
+  let msg = "Hello, I want to order: " + product;
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>
